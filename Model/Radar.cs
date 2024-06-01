@@ -4,11 +4,8 @@ namespace Model
 {
     public class Radar
     {
-        public static readonly string INSERT = "INSERT INTO Radar (Concessionaria, AnoDoPnvSnv, TipoDeRadar, Rodovia, Uf, KmM, Municipio, TipoPista, Sentido, Situacao, DataDaInativacao, Latitude, Longitude, VelocidadeLeve) VALUES (@Concessionaria, @AnoDoPnvSnv, @TipoDeRadar, @Rodovia, @Uf, @KmM, @Municipio, @TipoPista, @Sentido, @Situacao, @DataDaInativacao, @Latitude, @Longitude, @VelocidadeLeve)";
-        public static readonly string UPDATE = "UPDATE Radar SET Concessionaria = @Concessionaria, AnoDoPnvSnv = @AnoDoPnvSnv, TipoDeRadar = @TipoDeRadar, Rodovia = @Rodovia, Uf = @Uf, KmM = @KmM, Municipio = @Municipio, TipoPista = @TipoPista, Sentido = @Sentido, Situacao = @Situacao, DataDaInativacao = @DataDaInativacao, Latitude = @Latitude, Longitude = @Longitude, VelocidadeLeve = @VelocidadeLeve WHERE Id = @Id";
-        public static readonly string DELETE = "DELETE FROM Radar WHERE Id = @Id";
-        public static readonly string GETALL = "SELECT Id, Concessionaria, AnoDoPnvSnv, TipoDeRadar, Rodovia, Uf, KmM, Municipio, TipoPista, Sentido, Situacao, DataDaInativacao, Latitude, Longitude, VelocidadeLeve FROM Radar";
-        public static readonly string GET = "SELECT Id, Concessionaria, AnoDoPnvSnv, TipoDeRadar, Rodovia, Uf, KmM, Municipio, TipoPista, Sentido, Situacao, DataDaInativacao, Latitude, Longitude, VelocidadeLeve FROM Radar WHERE Id = @Id";
+
+        public static readonly string SELECT = "SELECT Concessionaria, AnoDoPnvSnv, TipoDeRadar, Rodovia, Uf, KmM, Municipio, TipoPista, Sentido, Situacao, DataDaInativacao, Latitude, Longitude, VelocidadeLeve FROM Radar";
 
         public string Concessionaria { get; set; }
         public string AnoDoPnvSnv { get; set; }

@@ -31,9 +31,8 @@ namespace Repository
                 using (SqlConnection sqlConnection = new SqlConnection(sqlConnectionString))
                 {
                     sqlConnection.Open();
-                    string sqlQuery = "SELECT Concessionaria, AnoDoPnvSnv, TipoDeRadar, Rodovia, Uf, KmM, Municipio, TipoPista, Sentido, Situacao, DataDaInativacao, Latitude, Longitude, VelocidadeLeve FROM Radar";
-
-                    using (SqlCommand sqlCommand = new SqlCommand(sqlQuery, sqlConnection))
+      
+                    using (SqlCommand sqlCommand = new SqlCommand(Radar.SELECT, sqlConnection))
                     using (SqlDataReader reader = sqlCommand.ExecuteReader())
                     {
                         while (reader.Read())
